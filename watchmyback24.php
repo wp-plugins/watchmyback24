@@ -1,14 +1,14 @@
 <?php
 
-define('WMB_VERSION','0.7.5');
+define('WMB_VERSION','0.7.5.5');
 
 /*
 Plugin Name: WatchMyBack24
-Plugin URI: http://quietschbunt.wordpress.com
+Plugin URI: http://sit.24stunden.de/watchmyback24
 Description: WatchMyBack24 verifies trackbacks and comments by checking against spam keywords, existing backlinks, a special keysum within comment against BBCode and Hooray-Jobs.
 Author: Sebastian Schwaner
-Author URI: http://quietschbunt.wordpress.com
-Version: 0.7.5
+Author URI: http://sit.24stunden.de/watchmyback24
+Version: 0.7.5.5
 */
 
 
