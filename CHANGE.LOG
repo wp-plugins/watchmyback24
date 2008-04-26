@@ -21,12 +21,12 @@ Apr 26th, 2008:
      + Version 0.7.6 in progress
 
 Apr 10th, 2008:
-   + Version 0.7.5 released
-   + using Wordpress 2.5 styles
-   + removing wmb_setStats()
-   + depricated: auto-updating is no longer supported
-   + new additional filters
-   + blocking comments that combines gecoities/gmail accounts (porn-shit)
+     + Version 0.7.5 released
+     + using Wordpress 2.5 styles
+     + removing wmb_setStats()
+     + depricated: auto-updating is no longer supported
+     + new additional filters
+     + blocking comments that combines gecoities/gmail accounts (porn-shit)
 
 
 Dec 19th, 2007:
