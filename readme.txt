@@ -14,6 +14,12 @@ WatchMyBack24 verifies trackbacks and comments by checking against spam keywords
 
 == Installation ==
 
+1. Download the ZIP archiv from the Wordpress.org plugin repository.
+2. Unzip the ZIP-archive.
+3. Upload the entire folder to your plugins folder (./wp-content/plugins/)
+4. Login into the administrative area of your weblog and activate the plugin in the Plugins section.
+5. Well done.
+
 == Frequently Asked Questions ==
 
 == Screenshots ==
