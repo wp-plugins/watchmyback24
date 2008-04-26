@@ -4,18 +4,21 @@
 # (c) 1997 - 2007 by Sebastian Schwaner
 #
 # FILE: watchmyback24.php
-# VERSION: 0.7.5
+# VERSION: 0.7.6
 #
 # DESC: WatchMyBack24 checks a incoming trackback/comment against
 # a valid backlink or a comment filter too see if incoming request is spam
 # or not. This is an alpha test.
 #
 # FROM: Quietschbunt Software Systems
-# AUTHOR: Sebastian Schwaner, < http://quietschbunt.wordpress.com >
+# AUTHOR: Sebastian Schwaner
 #
 ########################################################################################
 
 CHANGE.LOG
+
+Apr 26th, 2008:
+     + Version 0.7.6 in progress
 
 Apr 10th, 2008:
    + Version 0.7.5 released
