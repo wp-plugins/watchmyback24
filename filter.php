@@ -22,7 +22,8 @@ $wmb_comment_filter = array(
    'cool',
    'sorry',
    'wrote an interesting post today',
-   'sex'
+   'sex',
+   'here’s a quick excerpt'
 );
 
 ?>
