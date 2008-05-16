@@ -17,8 +17,9 @@
 
 CHANGE.LOG
 
-Apr 26th, 2008:
-     + Version 0.7.6 in progress
+May 16th, 2008:
+     + Version 0.7.6 released
+     + runs filtercheck for trackbacks
 
 Apr 10th, 2008:
      + Version 0.7.5 released
