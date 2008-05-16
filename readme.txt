@@ -25,4 +25,4 @@ WatchMyBack24 is a low traffic plugin because it doesn't check any external data
 
 == Screenshots ==
 
-http://sit.24stunden.de/watchmyback24/wmb.png
+tags/0.7.6/wmb.png
