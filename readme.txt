@@ -4,7 +4,7 @@ Donate link: http://sit.24stunden.de/watchmyback24
 Tags: comments, spam, spamfighting
 Requires at least: 2.0.0
 Tested up to: 2.5
-Stable tag: 0.7.7
+Stable tag: 0.7.6
 
 WatchMyBack24 is a powerful spamfighting plugin against comment or trackback spam.
 
@@ -24,3 +24,5 @@ WatchMyBack24 is a low traffic plugin because it doesn't check any external data
 == Frequently Asked Questions ==
 
 == Screenshots ==
+
+http://sit.24stunden.de/watchmyback24/wmb.png
