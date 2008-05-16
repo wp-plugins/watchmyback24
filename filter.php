@@ -4,7 +4,7 @@
 # COMMENT FILTER AGAINST BBCODE AND HOORAY JOBS
 # ----------------------------------------------------------------------------
 
-# version:0.7.2
+# version:0.7.6
 
 define('WMB_FILTER','0.0.4');
 
@@ -22,7 +22,8 @@ $wmb_comment_filter = array(
    'cool',
    'sorry',
    'wrote an interesting post today',
-   'sex'
+   'sex',
+   'here’s a quick excerpt',
 );
 
 ?>

@@ -4,26 +4,30 @@
 # (c) 1997 - 2007 by Sebastian Schwaner
 #
 # FILE: watchmyback24.php
-# VERSION: 0.7.5
+# VERSION: 0.7.6
 #
 # DESC: WatchMyBack24 checks a incoming trackback/comment against
 # a valid backlink or a comment filter too see if incoming request is spam
 # or not. This is an alpha test.
 #
 # FROM: Quietschbunt Software Systems
-# AUTHOR: Sebastian Schwaner, < http://quietschbunt.wordpress.com >
+# AUTHOR: Sebastian Schwaner
 #
 ########################################################################################
 
 CHANGE.LOG
 
+May 16th, 2008:
+     + Version 0.7.6 released
+     + runs filtercheck for trackbacks
+
 Apr 10th, 2008:
-   + Version 0.7.5 released
-   + using Wordpress 2.5 styles
-   + removing wmb_setStats()
-   + depricated: auto-updating is no longer supported
-   + new additional filters
-   + blocking comments that combines gecoities/gmail accounts (porn-shit)
+     + Version 0.7.5 released
+     + using Wordpress 2.5 styles
+     + removing wmb_setStats()
+     + depricated: auto-updating is no longer supported
+     + new additional filters
+     + blocking comments that combines gecoities/gmail accounts (porn-shit)
 
 
 Dec 19th, 2007:

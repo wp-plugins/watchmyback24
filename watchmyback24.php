@@ -1,6 +1,6 @@
 <?php
 
-define('WMB_VERSION','0.7.5.5');
+define('WMB_VERSION','0.7.6');
 
 /*
 Plugin Name: WatchMyBack24
@@ -8,7 +8,7 @@ Plugin URI: http://sit.24stunden.de/watchmyback24
 Description: WatchMyBack24 verifies trackbacks and comments by checking against spam keywords, existing backlinks, a special keysum within comment against BBCode and Hooray-Jobs.
 Author: Sebastian Schwaner
 Author URI: http://sit.24stunden.de/watchmyback24
-Version: 0.7.5.5
+Version: 0.7.6
 */
 
 
@@ -96,7 +96,7 @@ function wmb_check( $comment_data ) {
 
 	global $wpdb, $wmb_status, $user_ID, $wmb_comment_filter;
 	$wmb_options = get_option('WMB_OPTIONS');
-   $wmb_status = '1';  // on incoming comment_status has to be true
+     $wmb_status = '1';  // on incoming comment_status has to be true
 
 	# --- Check comments only
 	if( !isset( $user_ID ) && $comment_data['comment_type'] == '' ) :
@@ -114,20 +114,37 @@ function wmb_check( $comment_data ) {
 		if( substr_count( strtolower( $comment ), 'http://' ) == 1 ) $wmb_status = '0';
 		if( substr_count( strtolower( $comment ), 'http://' ) > 1 ) $wmb_status = 'spam';
 
-      # --- block GeoCities-URL with GMail-account
-      if( substr_count( $comment_data['comment_author_email'], '@gmail.com') > 0 && substr_count( $comment_data['comment_author_url'], 'geocities.com') > 0 )
-          $wmb_status = 'spam';
+          # --- block GeoCities-URL with GMail-account
+          if( substr_count( $comment_data['comment_author_email'], '@gmail.com') > 0 && substr_count( $comment_data['comment_author_url'], 'geocities.com') > 0 )
+               $wmb_status = 'spam';
 
 	endif;
 
-	if( $comment_data['comment_type'] == 'trackback') :     // if incoming comment is a trackback
-		$result = $wpdb->get_results(" SELECT guid FROM $wpdb->posts WHERE ID=".$comment_data['comment_post_ID']);
+
+     // if incoming comment is a trackback
+	if( $comment_data['comment_type'] == 'trackback') :
+
+          $comment = $comment_data['comment_content'];
+
+          $result = $wpdb->get_results(" SELECT guid FROM $wpdb->posts WHERE ID=".$comment_data['comment_post_ID']);
 		$posting = $result[0]->guid;
 		$trackback = $comment_data['comment_author_url'];
-		if( wmb_validate( $trackback,$posting ) == false ) $wmb_status = 'spam';
+
+          // VALIDATE TRACKBACK/PINGBACK
+          if( wmb_validate( $trackback,$posting ) == false ) $wmb_status = 'spam';
+
+          // EXECUTE FILTER ON
+          foreach( $wmb_comment_filter as $var ) :
+               if( substr_count( strtolower( $comment ),$var ) > 0 ) :
+                    $wmb_status = 'spam';
+                    break;
+               endif;
+          endforeach;
 	endif;
 
-	if( $wmb_status == 'spam' ) :                     // if it's spam increase the counter
+
+     // if it's spam increase the counter
+	if( $wmb_status == 'spam' ) :
 		$wmb_options['counter'] += 1;
 		update_option('WMB_OPTIONS',$wmb_options);
 	endif;
@@ -245,7 +262,7 @@ function wmb_setGUI() {
           <table class="widefat">
                <thead>
                     <tr>
-                         <th scrope="col">Attacked Posting</th>
+                         <th scope="col">Attacked Posting</th>
                          <th scope="col">SPAMs</th>
                          <th scope="col">Actions</th>
                     </tr>
